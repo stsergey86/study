@@ -1,18 +1,16 @@
 'use sctrict';
-let money = prompt("Ваш бюджет на месяц?", ""),
-    time = prompt("Введите дату в формате YYYY-MM-DD", "");
-let appData = {
-    budget: money,
-    timeData: time,
-    expences: {},
-    optionalExpenses: {},
-    income: [],
-    savings: false
+let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
-let a1 = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    a2 = prompt("Во сколько обойдется?", ""),
-    a3 = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    a4 = prompt("Во сколько обойдется?", "");
-appData.expences.a1 = a2;
-appData.expences.a3 = a4;
-alert(appData.budget / 30);
+let a1 = prompt("Один из последних просмотренных фильмов", ""),
+    a2 = +prompt("На сколько оцените его?", ""),
+    a3 = prompt("Один из последних просмотренных фильмов", ""),
+    a4 = +prompt("На сколько оцените его?", "");
+personalMovieDB.movies[a1] = a2;
+personalMovieDB.movies[a3] = a4;
+console.log(personalMovieDB.movies);
