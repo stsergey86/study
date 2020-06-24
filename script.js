@@ -1,6 +1,6 @@
 'use sctrict';
 let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
-if (numberOfFilms < 10 && numberOfFilms > 0) {
+if (numberOfFilms < 10) {
     alert("Просмотрено довольно мало фильмов");
 } else if (numberOfFilms >= 10 && numberOfFilms < 30) {
     alert("Вы классический зритель");
